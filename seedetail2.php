@@ -55,7 +55,7 @@ include 'connect.php';
 if (isset($_POST['id'])) {
   $id = $_POST['id'];
   
-  $sql = "SELECT `Title`, `Date` , `Content` FROM `newdiary` WHERE id = $id AND `UserID` = '".$_SESSION['UserID']."' AND `Publish` = 1";
+  $sql = "SELECT `Title`, `Date` , `Content` FROM `newdiary` WHERE id = $id AND `Publish` = 1";
   $result = mysqli_query($con, $sql);
   $row = mysqli_fetch_assoc($result);
   $title = $row['Title'];
