@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap");
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing : border-box;
+	font-family: "Poppins", sans-serif;
+}
+html{
+	height:100%;
+}
+a{
+	text-decoration: none;
+}
+.mydiary {
+	position: fixed;
+	height : 80px;
+	width : 100%;
+	z-index: 100;
+	padding: 0 20px;
+}
+.nav{
+	max-width : 1500px;
+	width : 90%;
+	margin: 0 auto;
+	margin-top: 50px;
+	
+}
+.nav {
+	display: flex;
+	height: 100%;
+	text-align: left;
+	align-items: center;
+	justify-content : space-between;
+	
+}
+.nav_logo, .Login_button{
+	color: white;
+	
+}
+.nav_logo{
+	font-size: 50px;
+	color: white;
+
+}
+.Login_button{
+	padding: 8px 32px;
+	border: 2px solid #fff;
+	background: transparent;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.Login_button:active{
+	transform: scale(0.98);
+}
+.Login_button:hover{
+	background-color: black;
+}
+body{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-image: url("loginbg.jpg");
+	background-size: cover;
+	background-position: center;
+	
+}
+/*Form*/
+.Form_container{
+	position: absolute;
+	max-width: 360px;
+	width: 150%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 101;
+	background: #fff;
+	border: 2px solid #fff;
+	border-radius: 12px;
+	padding: 30px
+	box-shadow: rgba(0,0,0,0.1);
+	cursor: pointer;
+}
+.Form_container h2{
+	font-size: 40px;
+	color:#0b0217;
+	text-align: center;
+	margin-top: 30px;
+}
+.Login_form{
+	/*text-align: center;*/
+}
+.input-box{
+	position: relative;
+	margin-top: 30px;
+	width: 85%;
+	height: 40px;
+}
+.input-box input{
+	height: 100%;
+	margin-left: 20px;
+	margin-right: 100px;
+	width: 100%;
+	border: none;
+	color: #333;
+	border-bottom: 1.5px solid grey;
+	padding: 0 30px;
+}
+.input-box input:focus{
+	border-color: #7d2ae8;
+}
+.input-box i{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	text-align: right;
+	margin-left:20px;
+}
+.input-box input:focus ~ i{
+	color: red;
+}
+.input-box placeholder{
+	text-align: center;
+	margin-left: 50px;
+}
+.Forgot{
+	display:flex;
+	align-items: center;
+	justify-content: right;
+	margin-right:28px;
+	font-size: 12px
+}
+.Form_container a{
+	color: #7d2ae8;
+}
+.Form_container a:hover{
+	text-decoration: underline;
+}
+
+.Login_btn{
+	background-color: blue;
+	border: 2px solid white;
+	border-radius: 12px;
+	color: #fff;
+	margin-top: 20px;
+	width: 80%;
+	margin-left:30px;
+	padding: 10px 0;
+	align-items: center;
+	cursor:pointer;
+
+}
+.Login_btn:hover{
+	background-color:#008080;
+}
+.Register{
+	margin-left:80px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-size:12px;
+    
+}
+.question{
+	text-align: center;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-right:20px;
+}
+.answer-box{
+	text-align: center;
+	justify-content:space-between;
+	margin-top: 10px;
+	margin-right:20px;
+	margin-left: 10px;
+	border: none;
+	width: 100%;
+}
+.error  {
+	background: #F2DEDE;
+	color: #A94442;
+	Padding: 10px;
+	width: 95%;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+.success  {
+	background: #BADFC0;
+	color: #0F5A1B;
+	Padding: 10px;
+	width: 95%;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+
+#Question{
+}
+
+
+/*.next_link {
+	
+	text-decoration: none;
+	color: #fff;
+	text-color:#fff;
+	font-size: 15px;
+} 
+
+*/
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif, 'DM Sans';
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0px;
+  width: 20%;
+  max-width: 300px;
+  background-color: #695F50;
+  color: white;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  z-index: 1;
+}
+.navbarrcontainer {
+  position: fixed; /* Make it stick */
+  top: 0; /* At the top of the viewport */
+  left: 0; /* Flush against the left side */
+  background-color: #695F50;
+  color: white;
+  width: 20%;
+  max-width: 300px;
+  height: 100%; /* Full height */
+  z-index: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  ul {
+    width: 20%;
+    max-width: 300px;
+    height: 100%;
+  }
+.header {
+  list-style-type: none;
+  background-color: #898680;
+  float: right;
+  width: 100%;
+  height: 130px;
+  position: fixed;
+  z-index: 1;
+}
+.headertext {
+  font-family: 'Brush Script MT', cursive;
+  padding-top: 20px;
+  margin-left: 23%;
+  font-size: 70px;
+  color: white;
+  float: left;
+}
+.logout{
+	font-size: 18px;
+	padding: 5 25px;
+	border-radius:12px;
+	background-color: #fff;
+	color:white;
+	background-position:fixed;
+	cursor:pointer;
+}
+
+article {
+  float: right;
+  padding-left: 0px;
+  width: 100%;
+  background-color: #D6D8A4;
+  padding-top: 130px;
+  min-height: 1080px;
+  height: auto;
+  max-height: 100000px;
+  
+}
+.articleContainer {
+  padding-left: 22%;
+  font-size: 30px;
+}
+.diary_Container {
+  width: 81%;
+  background-color: #C69F48;
+  padding: 30px;
+  margin: 20px;
+  height: 50%;
+}
+
+.diary_Container2 {
+  width: 81%;
+  background-color: #C69F48;
+  padding: 30px;
+  margin: 20px;
+}
+.diary_Round {border-radius: 23px;}
+
+.diary_Preview {
+  float: right;
+  margin: 5px 3px;
+}
+.diary_editButton {
+  float: right;
+  margin: 5px 3px;
+}
+.diary_delete {
+  float: right;
+  margin: 5px 3px;
+}
+#diary_Title {
+  font-size: 35px;
+  font-weight: bold;
+  width: 100%;
+}
+.diary_TitleDetail {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+}
+.diary_DayDate{
+  margin-top: 18px;
+  font-size: 20px;
+}
+.diary_content {
+  font-size: 25px;
+  margin-top: 30px;
+  width: 100%;
+  word-wrap: break-word;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.navbarcontainer {
+  padding-top: 25px;
+  width: 100%;
+  background-color: #695F50;
+}
+.navbarbutton {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width:100%;
+}
+.navbarbutton:hover {
+	background-color: black;
+	
+}
+
+.diary_addNew {
+  font-size: 25px;
+  padding-top: 70px;
+  text-align: center;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 30px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.diary_addNew:hover {background-color: #e7e7e7;}
+
+.navbarUsername {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+  float: center;
+  color: white;
+  font-family: 'DM Sans';
+}
+.diarynew{
+	font-size: 12px;
+	border-radius:12px;
+}
+.content{
+	max-width: 1000px;
+	width: 780px;
+	height: 500px;
+	border-radius:6px;
+	padding: 10px;
+}
+.date{
+	width: 780px;
+	height:40px;
+	border-radius:6px;
+	padding: 10px;
+	
+}
+.diaryentry{
+	float:left;
+	width: 90%;
+}
+
+.features{
+	float: right;
+	width: 10%;
+}
+.btn-submit{
+	padding: 10 25px;
+	border-radius:12px;
+	background-color: blue;
+	color:white;
+	background-position:fixed;
+}
+.btn-back{
+	padding: 10 25px;
+	border-radius:12px;
+	background-color: black;
+	color: #fff;
+	background-position:fixed;
+	text-decoration:none;
+}
+.search-btn-back{
+	margin-top:20px;
+}
+.searchback-btn{
+	font-size: 25px;
+	margin-left: 5px;
+	margin-top : 50px;
+	padding : 22 20px;
+	height: 10px;
+	color:white;
+}
+.btn-submit : hover {
+	background-color: grey;
+}
+.button {
+  background-color: #1DBEA5;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 25px 5px;
+  cursor: pointer;
+  shape-rendering: rounded-full;
+  text-decoration: none;
+}
+.buttonRound {border-radius: 12px;}
+
+.logoutButton {
+  padding-top: 42px;
+  text-align: right;
+  vertical-align: middle;
+  padding-right: 90px;
+  font-size: 23px;
+}
+
+.container{
+  width: 80%;
+  min-height: 5px;
+  padding: 5%;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar{
+  margin-top: 20px;
+  width: 86%;
+  background: rgb(243, 243, 243);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.search-bar button img{
+  width: 25px;
+}
+
+.search-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #58629b;
+  cursor: pointer;
+}
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+  float: right;
+  padding-left: 0px;
+  background-color: #D6D8A4; 
+  }
+
+@media only screen and (min-width: 2000px) {
+  .headertext {
+    margin-left: 16%;
+  }
+  .articleContainer {
+    padding-left: 16%;
+  }
+}
